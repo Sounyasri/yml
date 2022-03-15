@@ -1,0 +1,8 @@
+--- # this is my plabook pr
+- hosts: webservers
+  user: ansible
+  connection: ssh
+  become: true
+  tasks: 
+       - name: httpd
+         yum: pkgname=httpd state=present
